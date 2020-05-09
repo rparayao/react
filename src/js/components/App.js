@@ -1,19 +1,21 @@
 // src/js/components/App.js
 import React from "react";
-import List from "./List";
-import Form from "./Form";
+import FormRest from "./FormRest";
+import ListFromRest from "./ListFromRest";
 
 
 const App = () => (
   <>
     <div>
-      <h2>Create shopping List</h2>
-      <Form />
+      <h2>The World Bank</h2>
+      <h3>Country Information Lookup</h3>
+      <FormRest />
     </div>
+    {/* <hr/>
     <div>
-      <h2>Shopping List</h2>
-      <List />
-    </div>
+      <h1>Country Information</h1>
+      <ListFromRest />
+    </div> */}
   </>
 );
 

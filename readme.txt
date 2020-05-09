@@ -1,3 +1,15 @@
+Week 4: Assignment 
+Create a React app that uses Hooks, Fetch API, or Axios to display data from a REST API. 
+Pick one of the following free, public APIs and create a react app that displays the data. 
+You can limit the amount of data returned, if it is not paginated by just showing the first 
+couple items from the API
+
+Implemented an interactive web application where user can select a country. The countries information
+comes from 'http://api.worldbank.org/v2/country?format=json' RESTapi using axios library. 
+
+
+
+
 Week 3: Assignment 
 Remi P.
 
