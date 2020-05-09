@@ -1,10 +1,23 @@
+/**
+ * Remi P
+ * May 9, 2020
+ * UCI extension Spring 2020
+ */
+
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ListFromRest from "./ListFromRest";
 
 
 /**
+ * fetches data from a REST api using react hooks
+ * on startup its fetches list of country information from 
+ * world banks web site and populate a dropdown list
  * 
+ * From the drop down list the use can select a country and click submit
+ * to fetch more detail from the same website and update the display
+ * with more information.
  */
 function formRest() {
   const [countries, setCountries] = useState([]);

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 
 /**
- * 
+ * display country information
  * @param {*} param0 
  */
 function ListFromRest({message}=props) {

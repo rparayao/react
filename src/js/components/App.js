@@ -1,9 +1,16 @@
-// src/js/components/App.js
+/**
+ * Remi P
+ * May 9, 2020
+ * UCI extension Spring 2020
+ */
+
 import React from "react";
 import FormRest from "./FormRest";
-import ListFromRest from "./ListFromRest";
 
 
+/**
+ * top level app
+ */
 const App = () => (
   <>
     <div>
@@ -11,11 +18,6 @@ const App = () => (
       <h3>Country Information Lookup</h3>
       <FormRest />
     </div>
-    {/* <hr/>
-    <div>
-      <h1>Country Information</h1>
-      <ListFromRest />
-    </div> */}
   </>
 );
 
