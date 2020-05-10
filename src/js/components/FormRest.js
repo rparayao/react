@@ -22,7 +22,7 @@ import ListFromRest from "./ListFromRest";
 function formRest() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState([]);
-  let countryName = "US"
+  let countryName = "ABW"
 
   useEffect(() => {
     axios.get('http://api.worldbank.org/v2/country?format=json')

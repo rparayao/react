@@ -1,21 +1,60 @@
-import React from "react";
+/**
+ * Remi P
+ * May 9, 2020
+ * UCI extension Spring 2020
+ */
 
+import React, { Component } from 'react';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 
+const mapStyles = {
+  width: '100%',
+  height: '100%'
+};
 /**
  * display country information
  * @param {*} param0 
  */
-function ListFromRest({message}=props) {
-  return (
-    <>
-    <h2>Country: {message.name}</h2>
-    <h3>Region: {message.region.value}</h3>
-    <h3>Region ID: {message.region.id}</h3>
-    <h3>Capital City: {message.capitalCity}</h3>
-    <h4>Longitude: {message.longitude}</h4>
-    <h4>Latitude: {message.latitude}</h4>
-    </>
-  );
+export class ListFromRest extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {latitude: props.message.latitude, longitude:  props.message.longitude, place: props.message.name};
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("UPDATEP...")
+    if (this.props !== prevProps){
+      this.setState({latitude: this.props.message.latitude, longitude:  this.props.message.longitude, place: this.props.message.name});
+    }
+  }
+
+
+  render() {
+    return (
+      <Map
+        google={this.props.google}
+        zoom={5}
+        style={mapStyles}
+        initialCenter={{
+         lat: this.state.latitude,
+         lng: this.state.longitude
+        }}
+        center={{
+          lat:this.state.latitude,
+          lng: this.state.longitude
+        }}
+      >
+      <Marker
+        name={this.state.place}
+        position={{lat: this.state.latitude, lng: this.state.longitude}} />
+      <Marker /> 
+      </Map>
+    );
+  }
 }
 
-export default ListFromRest;
+
+// export default ListFromRest;
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyCGqCIEHEYroWEM5-siX_vKw6FOxMlueQE'
+})(ListFromRest);
