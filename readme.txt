@@ -7,6 +7,8 @@ couple items from the API
 Implemented an interactive web application where user can select a country. The countries information
 comes from 'http://api.worldbank.org/v2/country?format=json' RESTapi using axios library. 
 
+Update 2
+Add google map display when user select country from pull down list
 
 
 
